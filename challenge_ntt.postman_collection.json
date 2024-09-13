@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "e1ef3dcf-cd58-4be3-a5c4-f7b88359bf60",
+		"name": "challenge_ntt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18188023"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "get-account-by-identification",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "identification",
+								"value": "0850266248",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account/get-account-identification/0850266248",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account",
+								"get-account-identification",
+								"0850266248"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAcc\": \"\",\r\n    \"idCus\": {\r\n        \"idCus\": \"f77698b9-8ca8-4f35-a303-49a769e98c6b\"\r\n    },\r\n    \"accountNumber\": \"\",\r\n    \"accountType\": \"Ahorros\",\r\n    \"initialBalance\": 400,\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account/create-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account",
+								"create-account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "custommer",
+			"item": [
+				{
+					"name": "create-customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCus\": \"\",\r\n    \"person\": {\r\n        \"idPer\": \"\",\r\n        \"name\": \"Edison\",\r\n        \"surname\": \"Panchi\",\r\n        \"gender\": \"M\",\r\n        \"age\": 24,\r\n        \"identification\": \"1723685800\",\r\n        \"address\": \"Cochapamba Sur\",\r\n        \"phone\": \"0999286146\"\r\n    },\r\n    \"password\": \"Marcos1\",\r\n    \"email\": \"megn6248@mail.com\",\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/customer/create-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"customer",
+								"create-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCus\": \"f77698b9-8ca8-4f35-a303-49a769e98c6b\",\r\n    \"person\": {\r\n        \"idPer\": \"65bc7bb3-6981-4389-ba15-7d2bb65d8851\",\r\n        \"age\": 35\r\n    },\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/customer/update-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"customer",
+								"update-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/customer/get-all-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"customer",
+								"get-all-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-customer-by-identification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/customer/get-customer/0850266252",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"customer",
+								"get-customer",
+								"0850266252"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCus\": \"f77698b9-8ca8-4f35-a303-49a769e98c6b\",\r\n    \"person\": {\r\n        \"idPer\": \"65bc7bb3-6981-4389-ba15-7d2bb65d8851\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/customer/delete-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"customer",
+								"delete-customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movements",
+			"item": [
+				{
+					"name": "transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"originAccount\": \"2239529002\",\r\n    \"destinationAccount\": \"2220428002\",\r\n    \"value\": 1600\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account-movement/movement/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account-movement",
+								"movement",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMvn\": \"\",\r\n    \"idAcc\": {\r\n        \"idAcc\": \"4ba4fba8-0d78-473e-9d45-8c13bef29c03\",\r\n        \"accountNumber\":\"5551551005\"\r\n    },\r\n    \"date\": \"\",\r\n    \"movementType\": \"Retiro\",\r\n    \"value\": 100,\r\n    \"balance\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account-movement/movement/withdrawal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account-movement",
+								"movement",
+								"withdrawal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMvn\": \"\",\r\n    \"idAcc\": {\r\n        \"idAcc\": \"4ba4fba8-0d78-473e-9d45-8c13bef29c03\",\r\n        \"accountNumber\":\"5551551005\"\r\n    },\r\n    \"date\": \"\",\r\n    \"movementType\": \"Deposito\",\r\n    \"value\": 400,\r\n    \"balance\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account-movement/movement/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account-movement",
+								"movement",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report-by-dates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account-movement/movement/reports?startDate=2024-09-10&endDate=2024-09-11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account-movement",
+								"movement",
+								"reports"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-09-10"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-09-11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-report-by-identification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/wealthstream/api/account-movement/movement/get-movements-identification/0850266248",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wealthstream",
+								"api",
+								"account-movement",
+								"movement",
+								"get-movements-identification",
+								"0850266248"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
